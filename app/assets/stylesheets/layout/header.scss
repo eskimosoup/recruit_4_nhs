@@ -1,0 +1,8 @@
+@import '../lib/variables';
+
+header {
+  .red {
+    background-color: $red;
+    color: $white;
+  }
+}

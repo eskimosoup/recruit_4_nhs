@@ -1,0 +1,55 @@
+<%= form_for @application do |f| %>
+  <%= field_set_tag "Your Details" do %>
+
+    <% if @application.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize @application.errors.count, "error" %> prevented your application from being sent</h2>
+
+        <ul>
+          <% @application.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="row">
+      <div class="small-12 columns field">
+        <%= f.text_field :name, placeholder: "Name" %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-12 medium-4 columns">
+        <%= f.text_field :grade, placeholder: "Grade" %>
+      </div>
+      <div class="small-12 medium-4 columns">
+        <%= f.text_field :speciality, placeholder: "Speciality" %>
+      </div>
+      <div class="small-12 medium-4 columns">
+        <%= f.text_field :date, placeholder: "Date available for locums" %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-12 medium-4 columns">
+        <%= f.email_field :email, placeholder: "Email" %>
+      </div>
+      <div class="small-12 medium-4 columns">
+        <%= f.text_field :phone_number, placeholder: "Tel" %>
+      </div>
+      <div class="small-12 medium-4 columns">
+        <%= f.file_field :cv %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-12 columns">
+        <%= f.text_area :additional_information, placeholder: "Additional Information" %>
+      </div>
+    </div>
+
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+  <% end %>
+
+
+<% end %>
