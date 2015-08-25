@@ -3,14 +3,16 @@
     <div class="red">
       <div class="row">
         <div class="small-6 columns">
-          <%= image_tag "logo.jpg", alt: global_site_settings['Name'], title: global_site_settings['Name'] %>
+          <%= image_tag "logo.jpg", alt: global_site_settings['Name'], title: global_site_settings['Name'], class: "centred" %>
         </div>
         <div class="small-6 columns">
-          Specialist healthcare recruitment
-          <% unless global_site_settings["phone"].blank? %>
-            <br/>
-            Call today: <%= global_site_settings["phone"] %>
-          <% end %>
+          <p>
+            Specialist healthcare recruitment
+            <% unless global_site_settings["phone"].blank? %>
+              <br/>
+              Call today: <%= global_site_settings["phone"] %>
+            <% end %>
+          </p>
         </div>
       </div>
     </div>
