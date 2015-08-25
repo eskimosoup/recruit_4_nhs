@@ -19,37 +19,34 @@
       </div>
     </div>
     <div class="row">
-      <div class="small-12 medium-4 columns">
+      <div class="small-12 medium-4 columns field">
         <%= f.text_field :grade, placeholder: "Grade" %>
       </div>
-      <div class="small-12 medium-4 columns">
+      <div class="small-12 medium-4 columns field">
         <%= f.text_field :speciality, placeholder: "Speciality" %>
       </div>
-      <div class="small-12 medium-4 columns">
+      <div class="small-12 medium-4 columns field">
         <%= f.text_field :date, placeholder: "Date available for locums" %>
       </div>
     </div>
     <div class="row">
-      <div class="small-12 medium-4 columns">
+      <div class="small-12 medium-4 columns field">
         <%= f.email_field :email, placeholder: "Email" %>
       </div>
-      <div class="small-12 medium-4 columns">
+      <div class="small-12 medium-4 columns field">
         <%= f.text_field :phone_number, placeholder: "Tel" %>
       </div>
-      <div class="small-12 medium-4 columns">
+      <div class="small-12 medium-4 columns field">
         <%= f.file_field :cv %>
       </div>
     </div>
     <div class="row">
-      <div class="small-12 columns">
+      <div class="small-12 columns field">
         <%= f.text_area :additional_information, placeholder: "Additional Information" %>
       </div>
     </div>
-
-    <div class="actions">
-      <%= f.submit %>
-    </div>
   <% end %>
-
-
+  <div class="actions">
+    <%= f.submit %>
+  </div>
 <% end %>

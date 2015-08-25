@@ -1,8 +1,10 @@
-@import '../lib/variables';
-
 header {
   .red {
+    padding: 40px 0;
     background-color: $red;
     color: $white;
+  }
+  p {
+    font-size: em(20px);
   }
 }

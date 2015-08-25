@@ -1,0 +1,17 @@
+form {
+
+  fieldset legend {
+    color: $red;
+  }
+
+  .actions {
+    input[type="submit"] {
+      float: right;
+      color: $white;
+      background-color: $red;
+      border: 2px solid $red;
+      border-radius: 5px;
+      padding: 10px 130px;
+    }
+  }
+}
