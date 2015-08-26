@@ -5,6 +5,16 @@ header {
     color: $white;
   }
   p {
-    font-size: em(20px);
+    font-size: em(27px, 16px);
+    line-height: 1;
+    margin: em(5px, 27px) 0;
+  }
+  .call {
+    font-size: em(30px, 16px);
+    margin: 0;
+  }
+
+  img {
+    margin-left: em(20px);
   }
 }
