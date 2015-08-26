@@ -1,0 +1,32 @@
+<h1>Application Submitted on <%= @site_name %></h1>
+
+<p>
+  <strong>Name</strong> <%= @application.name %>
+</p>
+
+<p>
+  <strong>Grade</strong> <%= @application.grade %>
+</p>
+
+<p>
+  <strong>Speciality</strong> <%= @application.speciality %>
+</p>
+
+<p>
+  <strong>Email</strong> <%= mail_to @application.email %>
+</p>
+
+<p>
+  <strong>Phone Number</strong> <%= @application.phone_number %>
+</p>
+
+<p>
+  <strong>Date</strong> <%= @application.date %>
+</p>
+
+<% if @application.additional_information %>
+  <p>
+    <strong>Additional Information</strong>
+  </p>
+  <%= simple_format @application.additional_information %>
+<% end %>

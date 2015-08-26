@@ -7,6 +7,7 @@ class ApplicationsController < ApplicationController
   def create
     @application = Application.new(application_params)
     if @application.save
+      ApplicationMailer.application_created(@application).deliver_now
       redirect_to root_path, notice: "Thank you for your application"
     else
       render :new
@@ -16,6 +17,6 @@ class ApplicationsController < ApplicationController
   private
 
   def application_params
-    params.require(:applications).permit!
+    params.require(:application).permit!
   end
 end
