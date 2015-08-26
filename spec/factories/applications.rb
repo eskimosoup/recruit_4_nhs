@@ -7,7 +7,7 @@ FactoryGirl.define do
     phone_number "MyString"
     date "2015-08-25"
     additional_information "MyText"
-    cv "MyString"
+    cv { File.open(File.join(Rails.root, "spec/support/cvs/not_a_cv.docx"))}
   end
 
 end
