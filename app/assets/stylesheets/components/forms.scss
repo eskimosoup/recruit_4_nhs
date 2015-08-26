@@ -1,10 +1,40 @@
 form {
+  border-top: 1px solid $grey;
+  padding: em(8px) 0 0;
+  
+  textarea {
+    min-height: 235px;
+  }
+  
+  fieldset {
+    border: 0;
+  }
 
   fieldset legend {
     color: $red;
+    margin: 0;
+    padding: 0;
+    font-size: em(14px, 16px);
+  }
+  
+  .field {
+    margin: em(7px, 16px) 0;
+    
+    input,
+    textarea {
+      @include border-radius(3px);
+      font-size: em(14px, 16px);
+    }
+    
+    &.first {
+      margin-top: 0;
+    }
   }
 
   .actions {
+    @extend %clearfix;
+    margin: em(7px, 16px) 0 em(14px, 16px);
+    
     input[type="submit"] {
       float: right;
       color: $white;

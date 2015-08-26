@@ -2,15 +2,17 @@
   <div class="small-12 columns">
     <div class="red">
       <div class="row">
-        <div class="small-6 columns">
-          <%= image_tag "logo.jpg", alt: global_site_settings['Name'], title: global_site_settings['Name'], class: "centred" %>
+        <div class="small-7 columns">
+          <%= image_tag "logo.jpg", alt: global_site_settings['Name'], title: global_site_settings['Name'] %>
         </div>
-        <div class="small-6 columns">
+        <div class="small-5 columns">
           <p>
             Specialist healthcare recruitment
-            <% unless global_site_settings["phone"].blank? %>
-              <br/>
-              Call today: <%= global_site_settings["phone"] %>
+          </p>
+          
+          <p class="call">
+            <% unless global_site_settings["Phone"].blank? %>
+              Call today: <%= global_site_settings["Phone"] %>
             <% end %>
           </p>
         </div>
