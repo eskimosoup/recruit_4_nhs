@@ -30,6 +30,13 @@
     </p>
   </div>
 </div>
+<div class="row">
+  <div class="small-12 columns">
+    <% flash.each do |name, msg| %>
+      <%= content_tag :div, msg, class: name %>
+    <% end %>
+  </div>
+</div>
 
 <div class="row">
   <div class="small-12 columns">
