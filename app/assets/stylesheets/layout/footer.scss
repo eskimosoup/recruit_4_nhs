@@ -1,0 +1,10 @@
+footer {
+  background: $red;
+  color: $white;
+  padding: em(30px, 16px);
+  
+  p,
+  li {
+    font-size: em(13px, 16px);
+  }
+}
