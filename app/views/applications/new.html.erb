@@ -1,11 +1,19 @@
-<div class="row">
-  <div class="small-12 columns">
-    <%= image_tag "banner.jpg", alt: "Register with Recruit4Health today and you can receive a bonus of &pound;1000!", class: 'banner' %>
+<% unless @application.errors.any? %>
+  <div class="row">
+    <div class="small-12 columns">
+      <%= image_tag "banner.jpg", alt: "Register with Recruit4Health today and you can receive a bonus of &pound;1000!", class: 'banner' %>
+    </div>
   </div>
-</div>
+<% end %>
 
 <div class="row content">
   <div class="small-12 columns">
+      <% if flash.present? %>
+        <% flash.each do |name, msg| %>
+          <%= content_tag :div, msg, class: "#{name} flash-message" %>
+        <% end %>
+      <% end %>
+    
     <h1>
       Recruit4Health is offering a &pound;1000 registration bonus to all NHS Locum Doctors that work for Recruit4Health.
     </h1>
@@ -28,13 +36,6 @@
       To see if you qualify to register with us, please fill out the form below and attach your most recent CV.
       Please note that due to the quantity of application we receive, we will only contact you if your application has been successful
     </p>
-  </div>
-</div>
-<div class="row">
-  <div class="small-12 columns">
-    <% flash.each do |name, msg| %>
-      <%= content_tag :div, msg, class: name %>
-    <% end %>
   </div>
 </div>
 

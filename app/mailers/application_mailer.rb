@@ -17,7 +17,7 @@ class ApplicationMailer < ActionMailer::Base
   def application_created(application)
     @application = application
     attachments[File.basename(@application.cv.path)] = File.read(@application.cv.path)
-    mail to: site_email, subject: "Application form completed #{ site_name }"
+    mail from: site_email, to: site_email, subject: "Application form completed #{ site_name }"
   end
 
   def site_name
