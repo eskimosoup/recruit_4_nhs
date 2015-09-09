@@ -14,10 +14,11 @@ class ApplicationMailer < ActionMailer::Base
   default from: site_email
   layout "mailer"
 
-  def application_created(application)
+  def application_created(global_site_settings, application)
+    @site_settings = global_site_settings
     @application = application
-    attachments[File.basename(@application.cv.path)] = File.read(@application.cv.path)
-    mail from: site_email, to: site_email, subject: "Application form completed #{ site_name }"
+    attachments[File.basename(@application.cv.path)] = File.read(@application.cv.path) if @application.cv.present?
+    mail from: @site_settings['Email'], to: @site_settings['Email'], subject: "Application form completed #{ @site_settings['Name'] }"
   end
 
   def site_name
