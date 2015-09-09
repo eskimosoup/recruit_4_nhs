@@ -4,40 +4,40 @@
       <%= image_tag "banner.jpg", alt: "Register with Recruit4Health today and you can receive a bonus of &pound;1000!", class: 'banner' %>
     </div>
   </div>
-<% end %>
 
-<div class="row content">
-  <div class="small-12 columns">
-      <% if flash.present? %>
-        <% flash.each do |name, msg| %>
-          <%= content_tag :div, msg, class: "#{name} flash-message" %>
+  <div class="row content">
+    <div class="small-12 columns">
+        <% if flash.present? %>
+          <% flash.each do |name, msg| %>
+            <%= content_tag :div, msg, class: "#{name} flash-message" %>
+          <% end %>
         <% end %>
-      <% end %>
-    
-    <h1>
-      Recruit4Health is offering a &pound;1000 registration bonus to all NHS Locum Doctors that work for Recruit4Health.
-    </h1>
 
-    <p>
-      Specialising in the healthcare sector,Recruit4Health is contracted to supply NHS Locum doctor roles throughout the UK,
-      in particular the North West, Yorkshire, East and South East
-    </p>
+      <h1>
+        Recruit4Health is offering a &pound;1000 registration bonus to all NHS Locum Doctors that work for Recruit4Health.
+      </h1>
 
-    <ul>
-      <li>
-        Recruit4Health has locum NHS doctor roles in all grades and specialties
-      </li>
-      <li>
-        Recruit4Health has hundreds of locum vacancies - full time work or ad hoc shifts
-      </li>
-    </ul>
+      <p>
+        Specialising in the healthcare sector,Recruit4Health is contracted to supply NHS Locum doctor roles throughout the UK,
+        in particular the North West, Yorkshire, East and South East
+      </p>
 
-    <p>
-      To see if you qualify to register with us, please fill out the form below and attach your most recent CV.
-      Please note that due to the quantity of application we receive, we will only contact you if your application has been successful
-    </p>
+      <ul>
+        <li>
+          Recruit4Health has locum NHS doctor roles in all grades and specialties
+        </li>
+        <li>
+          Recruit4Health has hundreds of locum vacancies - full time work or ad hoc shifts
+        </li>
+      </ul>
+
+      <p>
+        To see if you qualify to register with us, please fill out the form below and attach your most recent CV.
+        Please note that due to the quantity of application we receive, we will only contact you if your application has been successful
+      </p>
+    </div>
   </div>
-</div>
+<% end %>
 
 <div class="row">
   <div class="small-12 columns">
