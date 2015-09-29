@@ -24,6 +24,14 @@
   <strong>Date</strong> <%= @application.date %>
 </p>
 
+
+<p>
+  <strong>How did you hear about this offer?</strong>
+  <%= @application.how_heard %>
+  <%= @application.how_heard_other %>
+</p>
+
+
 <% if @application.additional_information %>
   <p>
     <strong>Additional Information</strong>

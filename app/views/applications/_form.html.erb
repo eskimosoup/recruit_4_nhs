@@ -41,6 +41,14 @@
       </div>
     </div>
     <div class="row">
+      <div class="small-12 medium-4 columns field">
+        <%= f.select :how_heard, options_for_select(Application::HOW_HEARD), prompt: 'How did you hear about this offer?' %>
+      </div>
+      <div class="small-12 medium-8 columns field">
+        <%= f.text_field :how_heard_other, placeholder: "Please tell us how you heard about this offer if you selected 'Other' from the previous drop down" %>
+      </div>
+    </div>
+    <div class="row">
       <div class="small-12 columns field">
         <%= f.text_area :additional_information, placeholder: "Additional Information" %>
       </div>
