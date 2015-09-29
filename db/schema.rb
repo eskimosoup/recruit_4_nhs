@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150909143800) do
+ActiveRecord::Schema.define(version: 20150929065924) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,6 +27,8 @@ ActiveRecord::Schema.define(version: 20150909143800) do
     t.string   "cv"
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
+    t.string   "how_heard"
+    t.text     "how_heard_other"
   end
 
   create_table "optimadmin_administrators", force: :cascade do |t|
