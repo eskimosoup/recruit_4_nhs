@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
-ruby "2.2.3"
+ruby '2.2.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.5'
+gem 'rails', '4.2.5.1'
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use SCSS for stylesheets
@@ -36,7 +36,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   gem 'rspec-rails', '~> 3.0'
-  gem "factory_girl_rails"
+  gem 'factory_girl_rails'
   gem 'shoulda-matchers'
 end
 
@@ -53,12 +53,12 @@ group :development do
   gem 'rack-mini-profiler'
   gem 'flamegraph'
   gem 'stackprof', '~> 0.2.7'
-  gem "bullet"
+  gem 'bullet'
 end
 
 group :test do
   gem 'database_cleaner', '~> 1.4.1'
-  gem "capybara"
+  gem 'capybara'
   gem 'launchy', '~> 2.4.3'
   gem 'poltergeist'
 end
